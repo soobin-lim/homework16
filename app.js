@@ -1,8 +1,14 @@
-var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+
+var exphbs = require('express-handlebars');
+var hbs = exphbs.create({
+  defaultLayout: 'index',
+  extname: 'hbs',
+  layoutsDir: path.join(__dirname + '/views/layouts')
+});
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -14,28 +20,27 @@ app.use('/js', express.static(path.join(__dirname, 'node_modules/bootstrap/dist/
 app.use('/js', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
 
 // view engine setup
+// app.set('views', './views');
+app.engine('hbs', hbs.engine);    // it has to be 'hbs'
+app.set('view engine', 'hbs');    // it has to be 'hbs' too
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'pug');
-app.set('views', './views');
-
 
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-app.use('/css2', express.static(path.join(__dirname, 'public/stylesheets/')))
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   next(createError(404));
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
