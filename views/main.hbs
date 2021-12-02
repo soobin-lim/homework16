@@ -1,68 +1,108 @@
 <div class="section no-pad-bot" id="index-banner">
   <div class="container">
-    <br><br>
-    <div class="row center">
-      <h5 class="header col s12 light">Developer is born in Car Material Factory</h5>
-    </div>
-
-    <h1 class="header center black-text">Soobin Lim</h1>
-
-    <div class="row center">
-      <a href="http://materializecss.com/getting-started.html" id="download-button"
-        class="btn-large waves-effect waves-light orange">Portfolios</a>
-    </div>
-    <br><br>
-
+    <h4 class="header black-text">Soobin Lim</h4>
   </div>
 </div>
-
 
 <div class="container">
+
   <div class="section">
-
-    <!--   Icon Section   -->
     <div class="row">
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">Instinct to make</h5>
+      <div class="col s12 m4 ">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Contact</span>
+            <p>Tel:9991929505, Email: sblim.monterrey@gmail.com</p>
+          </div>
+          
+        </div>
+      </div>
 
-          <p class="light">As a IT employee, It is a likely situation to work in 24 hours ready.
-            Just an employee finding excel macros to help.
-            But one day I took a travel to near city. I said to my self, I will not come back 
-            until I complete an app for company.
-          </p>
+      <div class="col s12 m4 ">
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Github Profile</span>
+            <p>https://github.com/soobin-lim</p>
+          </div>
+          <div class="card-action"> 
+            <a href="https://github.com/soobin-lim">Link</a>
+          </div>
         </div>
       </div>
 
       <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">Passion to Automation</h5>
-
-          <p class="light">I wanted to build a tool that works for me in office.
-            I could help many people, including my self.
-            Production-level apps and coding.
-            I asked 'we can make a macro for this, like people use macro for gaming'.
-            I did my all to use it in real daily, monthly, yearly work.
-          </p>
+        <div class="card blue-grey darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Linked In Profile</span>
+            <p>https://www.linkedin.com/in/soobin-lim-738835210/</p>
+          </div>
+          <div class="card-action">
+            <a href="#">https://www.linkedin.com/in/soobin-lim-738835210/</a>
+          </div>
         </div>
       </div>
 
-      <div class="col s12 m4">
-        <div class="icon-block">
-          <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
-          <h5 class="center">Easy to work with</h5>
+    </div>
+  </div>
 
-          <p class="light">I wanted to access to the most recent technology, the most fast situation.
-            I am facing my limit and trying to be better myself as an IT employee.
-            I always tried to block time for myself and make something valuable for other people.
-          </p>
+  <div class="row">
+    <div class="col s12 m12 left">
+      <H4>Portfolios</h4>
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col s12 m4 center ">
+      <a href="https://glacial-mesa-78198.herokuapp.com/signup">
+        <div class="card-panel portfolio1">
+          <div class="icon-block grey-text text-darken-3">
+            <h5>Tech Blog</h5>
+              {{!-- <h5 class="center btn-large blue-grey darken-1">Portfolio 1 </h5> --}}
+          </div>
         </div>
-      </div>
+      </a>
     </div>
 
+    <a href="https://arcane-taiga-08124.herokuapp.com/inventory">
+      <div class="col s12 m4 center ">
+        <div class="card-panel portfolio2" style="background-image: url('/images/2.png');background-repeat: repeat;
+    background-size: contain; ">
+          <div class="icon-block grey-text text-darken-3">
+            <h5>Car Material Production</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://lit-shore-98221.herokuapp.com/">
+      <div class="col s12 m4 center ">
+        <div class="card-panel portfolio3" style="background-image: url('/images/3.png');background-repeat: repeat;
+    background-size: contain; ">
+          <div class="icon-block grey-text text-darken-3">
+            <h5>Daily Scheduler</h5>
+          </div>
+        </div>
+      </div>
+    </a>
+
   </div>
-  <br><br>
-</div>
-{{> footer}}
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+  <br>
+  <br>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script type="text/javascript" src='javascripts/main.js'></script>
+  {{> footer}}
